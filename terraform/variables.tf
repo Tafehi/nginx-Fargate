@@ -3,10 +3,6 @@ variable "AWS_ACCESS_KEY" {}
 variable "AWS_SECRET_KEY" {}
 variable "AWS_REGION" {}
 
-variable "aws_region" {
-  description = "The AWS region things are created in"
-  default     = "us-west-2"
-}
 
 variable "ecs_task_execution_role_name" {
   description = "ECS task execution role name"
@@ -47,3 +43,10 @@ variable "fargate_memory" {
   default     = "2048"
 }
 
+variable "name" {
+  default = "fargate"
+}
+
+variable "environment" {
+  default = "k8s"
+}
