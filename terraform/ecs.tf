@@ -12,7 +12,7 @@ data "template_file" "cb_app" {
     app_port       = var.app_port
     fargate_cpu    = var.fargate_cpu
     fargate_memory = var.fargate_memory
-    aws_region     = var.aws_region
+    aws_region     = var.AWS_REGION
   }
 }
 
@@ -44,7 +44,5 @@ resource "aws_ecs_service" "main" {
     container_name   = "cb-app"
     container_port   = var.app_port
   }
-
-  depends_on = [aws_alb_listener.front_end, aws_iam_role_policy_attachment.ecs_task_execution_role]
 }
 

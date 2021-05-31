@@ -83,7 +83,7 @@ resource "aws_iam_policy" "secrets" {
             "Action": [
               "secretsmanager:GetSecretValue"
             ],
-            "Resource": ${jsonencode(var.container_secrets_arns)}
+            "Resource": "*"
         }
     ]
 }
