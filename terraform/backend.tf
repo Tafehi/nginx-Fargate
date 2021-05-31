@@ -3,7 +3,7 @@ terraform {
     organization = "nginx-docker"
 
     workspaces {
-      name = "fargate-Docker-nginx"
+      name = "nginx-Docker-k8s"
     }
   }
 }
